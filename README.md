@@ -4,6 +4,8 @@
 
 ### Live Demo :
 
+https://tasty-food-restaurant-with-react.netlify.app/
+
 ## Technologies I used :
 
 - React Redux
