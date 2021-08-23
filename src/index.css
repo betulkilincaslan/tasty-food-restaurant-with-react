@@ -65,8 +65,8 @@
 .scroll-container {
   color: #065f46;
   position: fixed;
-  right: 100px;
-  bottom: 80px;
+  right: 70px;
+  bottom: 50px;
   z-index: 10;
   width: 4px;
   height: 40px;
