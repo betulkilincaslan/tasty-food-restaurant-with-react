@@ -1,3 +1,29 @@
+## Tasty Food Restaurant
+
+- I prepared this project as the graducation project of the Kodluyoruz Istanbul Front-End Web Development Bootcamp. I used React in my project and I included Redux for the state management. Other technologies I use are given below. You can also find the link to the live demo of the project below.
+
+### Live Demo :
+
+## Technologies I used :
+
+- React Redux
+- React Router Dom
+- React Icons
+- React Alertify
+- React Slick
+- React Lazyload
+- React Scroll
+- AOS
+- Form Serialize
+- Json Server
+- Tailwind CSS
+- Google Maps
+
+## Referances :
+
+- Unsplash
+- Google Fonts
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
