@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-// import { BiMoon, BiSun } from "react-icons/bi";
 import { FaBars, FaCartPlus } from "react-icons/fa";
 import { useEffect } from "react";
 
