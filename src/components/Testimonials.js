@@ -6,7 +6,8 @@ const Testimonials = () => {
   const [testimonials, setTestimonials] = useState([]);
 
   const getTestimonials = async () => {
-    const testimonialsURL = "http://localhost:3008/testimonials";
+    const testimonialsURL =
+      "https://my-json-server.typicode.com/betulkilincaslan/tasty-food-db/testimonials";
     await fetch(testimonialsURL)
       .then((response) => response.json())
       .then((data) => setTestimonials(data));

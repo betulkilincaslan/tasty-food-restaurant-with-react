@@ -11,7 +11,8 @@ export function getCategoriesSuccess(categories) {
 // **********  Getting categories from api ********** //
 export function getCategories() {
   return function (dispatch) {
-    const categoryURL = "http://localhost:3008/categories";
+    const categoryURL =
+      "https://my-json-server.typicode.com/betulkilincaslan/tasty-food-db/categories";
     return fetch(categoryURL)
       .then((response) => response.json())
       .then((result) => dispatch(getCategoriesSuccess(result)));

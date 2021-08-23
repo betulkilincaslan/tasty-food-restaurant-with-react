@@ -8,7 +8,8 @@ const Chefs = () => {
   const [chefs, setChefs] = useState([]);
 
   const getChefs = async () => {
-    const chefsURL = "http://localhost:3008/chefs";
+    const chefsURL =
+      "https://my-json-server.typicode.com/betulkilincaslan/tasty-food-db/chefs";
     await fetch(chefsURL)
       .then((response) => response.json())
       .then((data) => setChefs(data));

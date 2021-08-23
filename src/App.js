@@ -1,4 +1,3 @@
-//npx json-server --watch src/api/db.json --port 3008
 import React, { useState, useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
 import AOS from "aos";
