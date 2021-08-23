@@ -7,8 +7,7 @@ export function getMenuSuccess(menu) {
 // **********  Getting menu from api ********** //
 export function getMenu(category) {
   return function (dispatch) {
-    let menuURL =
-      "https://my-json-server.typicode.com/betulkilincaslan/tasty-food-db/menu";
+    let menuURL = `${process.env.REACT_APP_API_ENDPOINT}/menu`;
     if (category) {
       menuURL += "?category=" + category;
     }
