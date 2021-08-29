@@ -5,5 +5,6 @@ export const GET_MENU_SUCCESS = "GET_MENU_SUCCESS";
 
 export const ADD_TO_CART = "ADD_TO_CART";
 export const REMOVE_FROM_CART = "REMOVE_FROM_CART ";
+export const ADJUST_QUANTITY = "ADJUST_QUANTITY ";
 
 export const SEARCH_MENU = "SEARCH_MENU ";

@@ -9,3 +9,10 @@ export function addToCart(menuItem) {
 export function removeFromCart(cartItem) {
   return { type: actionTypes.REMOVE_FROM_CART, payload: cartItem };
 }
+
+export function addjustQuantity(menuItemID, value) {
+  return {
+    type: actionTypes.ADJUST_QUANTITY,
+    payload: { id: menuItemID, quantity: value },
+  };
+}
