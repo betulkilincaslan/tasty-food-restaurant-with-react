@@ -30,7 +30,7 @@ export default function cartReducer(state = initialState.cart, action) {
     case actionTypes.ADJUST_QUANTITY:
       let newState3 = state.map((cartItem) => {
         if (cartItem.menuItem.id === action.payload.id) {
-          return { ...cartItem, quantity: action.payload.quantity };
+          return { ...cartItem, quantity: +action.payload.quantity };
         }
         return cartItem;
       });
