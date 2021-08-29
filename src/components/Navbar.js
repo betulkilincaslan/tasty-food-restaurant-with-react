@@ -67,12 +67,14 @@ const Navbar = ({ toggle, toggleHome, navbarBg, cart }) => {
           <li>
             <Link
               to="/cart"
-              className="flex gap-2 items-center justify-center               
-                text-lg transform hover:text-yellow-400   transition-colors duration-300 cursor-pointer relative bg-green-600 px-4 rounded-full"
+              className={
+                "flex gap-2 items-center justify-center text-lg transform hover:text-yellow-400 transition-colors duration-300 cursor-pointer " +
+                (cartCounter > 0 ? "bg-green-600 px-4 rounded-full" : "")
+              }
             >
               <span>Cart</span>
               <FaCartPlus size={20} />
-              <span>{cartCounter}</span>
+              {cartCounter > 0 && <span>{cartCounter}</span>}
             </Link>
           </li>
         </ul>
