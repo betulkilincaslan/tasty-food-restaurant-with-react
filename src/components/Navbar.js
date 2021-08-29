@@ -1,10 +1,21 @@
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaCartPlus } from "react-icons/fa";
-import { useEffect } from "react";
+import { connect } from "react-redux";
 
-const Navbar = (props) => {
-  const { toggle, toggleHome, navbarBg } = props;
+const Navbar = ({ toggle, toggleHome, navbarBg, cart }) => {
   useEffect(() => {}, [navbarBg]);
+
+  // **********  Cart Counter ********** //
+  const [cartCounter, setCartCounter] = useState(0);
+
+  useEffect(() => {
+    let count = 0;
+    cart.forEach((cartItem) => {
+      count += cartItem.quantity;
+    });
+    setCartCounter(count);
+  }, [cart, cartCounter]);
 
   return (
     <nav
@@ -57,10 +68,11 @@ const Navbar = (props) => {
             <Link
               to="/cart"
               className="flex gap-2 items-center justify-center               
-                text-lg transform hover:text-yellow-400   transition-colors duration-300 cursor-pointer relative"
+                text-lg transform hover:text-yellow-400   transition-colors duration-300 cursor-pointer relative bg-green-600 px-4 rounded-full"
             >
-              <FaCartPlus size={20} />
               <span>Cart</span>
+              <FaCartPlus size={20} />
+              <span>{cartCounter}</span>
             </Link>
           </li>
         </ul>
@@ -69,4 +81,9 @@ const Navbar = (props) => {
   );
 };
 
-export default Navbar;
+function mapStateToProps(state) {
+  return {
+    cart: state.cartReducer,
+  };
+}
+export default connect(mapStateToProps)(Navbar);
