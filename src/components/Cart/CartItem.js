@@ -43,7 +43,7 @@ const CartItem = ({ cartItem, actions }) => {
               name="quantity"
               value={inputChange}
               onChange={onChangeHandler}
-              className="w-16 p-2 bg-yellow-400 rounded-md opacity-90"
+              className="w-16 p-2 bg-yellow-400 rounded-md opacity-90 outline-none"
             ></input>
           </div>
           <p className="tracking-widest text-sm">
