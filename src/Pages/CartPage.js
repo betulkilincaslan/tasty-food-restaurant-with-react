@@ -9,22 +9,22 @@ const CartPage = ({ setNavbarBg, cart }) => {
   }, []);
 
   return (
-    <>
-      <section className="mt-16">
-        <div className="max-w-7xl sm:px-16 mx-auto mb-8">
-          <div className="container mx-auto mt-24">
-            <div className="flex flex-wrap justify-between mt-5 items-start text-gray-900">
-              <div className="w-full mb-4 lg:mb-0 lg:w-2/3 flex flex-col flex-shrink-0">
+    <section className="mt-16">
+      <div className="max-w-7xl sm:px-16 mx-auto mb-8">
+        <div className="container mx-auto mt-24">
+          <div className="flex flex-wrap justify-between mt-5 items-start text-gray-900">
+            <div className="w-full mb-4 lg:mb-0 lg:w-2/3 flex flex-col flex-shrink-0">
+              <ul className="md:pr-8">
                 {cart.map((cartItem) => (
                   <CartItem key={cartItem.menuItem.id} cartItem={cartItem} />
                 ))}
-              </div>
-              <OrderSummary />
+              </ul>
             </div>
+            <OrderSummary />
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 
