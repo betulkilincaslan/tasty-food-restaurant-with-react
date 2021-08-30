@@ -21,7 +21,7 @@ const Navbar = ({ toggle, toggleHome, navbarBg, cart }) => {
     <nav
       style={{ zIndex: "9990" }}
       className={
-        "w-full h-16 flex justify-between items-center fixed top-0 left-0 py-4 px-10 shadow-sm uppercase tracking-widest font-bold text-white " +
+        "w-full h-16 flex justify-between items-center fixed top-0 left-0 py-4 px-12 shadow-sm uppercase tracking-widest font-bold text-white " +
         (navbarBg ? navbarBg : "bg-green-800")
       }
     >
@@ -67,14 +67,17 @@ const Navbar = ({ toggle, toggleHome, navbarBg, cart }) => {
           <li>
             <Link
               to="/cart"
-              className={
-                "flex gap-2 items-center justify-center text-lg transform hover:text-yellow-400 transition-colors duration-300 cursor-pointer " +
-                (cartCounter > 0 ? "bg-green-600 px-4 rounded-full" : "")
-              }
+              className="flex gap-2 items-center justify-center text-lg transform hover:text-yellow-400 transition-colors duration-300 cursor-pointer"
             >
               <span>Cart</span>
-              <FaCartPlus size={20} />
-              {cartCounter > 0 && <span>{cartCounter}</span>}
+              <span class="relative inline-block">
+                <FaCartPlus size={20} />
+                {cartCounter > 0 && (
+                  <span className="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-gray-50 transform translate-x-6 -translate-y-5 bg-red-600 rounded-full">
+                    {cartCounter}
+                  </span>
+                )}
+              </span>
             </Link>
           </li>
         </ul>
