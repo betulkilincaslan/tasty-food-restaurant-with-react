@@ -64,7 +64,7 @@ const CartItem = ({ cartItem, actions }) => {
               name="quantity"
               value={quantity}
               onChange={onChangeHandler}
-              className="w-12 p-2 bg-yellow-200 rounded-md opacity-90 outline-none"
+              className="w-12 p-2 bg-yellow-200 rounded-md outline-none"
             ></input>
             <span
               onClick={() => increaseQuantity()}
