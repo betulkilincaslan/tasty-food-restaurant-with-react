@@ -54,7 +54,7 @@ const CartItem = ({ cartItem, actions }) => {
           <div className="flex items-center justify-center gap-2">
             <span
               onClick={() => decreaseQuantity()}
-              className="bg-yellow-400 px-1 py-2 rounded-full cursor-pointer"
+              className="bg-yellow-400 p-2 rounded-lg cursor-pointer"
             >
               <FiMinus />
             </span>
@@ -64,11 +64,11 @@ const CartItem = ({ cartItem, actions }) => {
               name="quantity"
               value={quantity}
               onChange={onChangeHandler}
-              className="w-12 p-2 bg-yellow-200 rounded-md outline-none"
+              className="w-12 pl-4 p-2 bg-yellow-200 rounded-lg outline-none"
             ></input>
             <span
               onClick={() => increaseQuantity()}
-              className="bg-yellow-400 px-1 py-2 rounded-full cursor-pointer"
+              className="bg-yellow-400 p-2 rounded-lg cursor-pointer"
             >
               <FiPlus />
             </span>
