@@ -55,7 +55,7 @@ const MenuList = (props) => {
         {filteredMenu.map((menuItem) => (
           <div
             key={menuItem.id}
-            data-aos="fade-up"
+            // data-aos="fade-up"
             className="flex items-center justify-center"
           >
             <div className="max-w-sm mx-auto md:m-0 rounded overflow-hidden shadow-lg w-64 lg:w-72 transform hover:scale-105 motion-reduce:transform-none transition-all duration-300">
