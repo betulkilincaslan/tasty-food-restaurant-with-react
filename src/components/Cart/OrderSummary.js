@@ -1,37 +1,28 @@
 import { connect } from "react-redux";
+import OrderSummaryItem from "./OrderSummaryItem";
 
-const OrderSummary = (props) => {
+const OrderSummary = ({ cart }) => {
   const emptyCartMessage = "Empty Cart";
 
-  // Total price of Cart Items:
+  // **********  Total price of Cart Items ********** //
   let initialValue = 0;
-  let totalPrice = props.cart.reduce(
+  let totalPrice = cart.reduce(
     (accumulator, cartItem) =>
       accumulator + cartItem.menuItem.price * cartItem.quantity,
     initialValue
   );
 
   return (
-    <div className="w-full mb-6 lg:mb-0 lg:w-1/3 px-4 lg:sticky top-24">
+    <aside className="w-full mb-6 lg:mb-0 lg:w-1/3 px-4 lg:sticky top-24">
       <div className="flex-grow rounded-lg overflow-hidden shadow-lg bg-green-600 bg-opacity-60  px-4">
         <div className="px-6 mb-2 flex items-center justify-center">
           <p className="text-black text-center py-4 font-bold text-2xl">
-            {props.cart.length > 0 ? "Order Summary" : emptyCartMessage}
+            {cart.length > 0 ? "Order Summary" : emptyCartMessage}
           </p>
         </div>
         <div className="font-semibold">
-          {props.cart.map((cartItem) => (
-            <div
-              key={cartItem.menuItem.id}
-              className="flex items-center justify-between mb-2"
-            >
-              <span className="text-sm">{cartItem.menuItem.name}</span>
-
-              <span className="text-sm">
-                {" "}
-                ${cartItem.menuItem.price * cartItem.quantity}
-              </span>
-            </div>
+          {cart.map((cartItem) => (
+            <OrderSummaryItem key={cartItem.menuItem.id} cartItem={cartItem} />
           ))}
         </div>
         <div className="flex items-center justify-between my-4">
@@ -49,7 +40,7 @@ const OrderSummary = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </aside>
   );
 };
 
