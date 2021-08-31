@@ -33,7 +33,7 @@ const ChangeCartItemQty = ({ cartItem, actions }) => {
     <div className="flex items-center justify-center gap-2">
       <span
         onClick={() => decreaseQuantity()}
-        className="bg-yellow-400 p-2 rounded-lg cursor-pointer"
+        className="bg-yellow-400 p-3 rounded-lg cursor-pointer"
       >
         <FiMinus />
       </span>
@@ -47,7 +47,7 @@ const ChangeCartItemQty = ({ cartItem, actions }) => {
       ></input>
       <span
         onClick={() => increaseQuantity()}
-        className="bg-yellow-400 p-2 rounded-lg cursor-pointer"
+        className="bg-yellow-400 p-3 rounded-lg cursor-pointer"
       >
         <FiPlus />
       </span>
@@ -58,7 +58,6 @@ const ChangeCartItemQty = ({ cartItem, actions }) => {
 function mapDispatchToProps(dispatch) {
   return {
     actions: {
-      removeFromCart: bindActionCreators(cartActions.removeFromCart, dispatch),
       addjustQuantity: bindActionCreators(
         cartActions.addjustQuantity,
         dispatch
