@@ -26,8 +26,10 @@ const ChangeCartItemQty = ({ cartItem, actions }) => {
   };
 
   const onChangeHandler = (e) => {
-    setQuantity(e.target.value);
-    actions.addjustQuantity(cartItem.menuItem.id, e.target.value);
+    if (e.target.value >= 0) {
+      setQuantity(e.target.value);
+      actions.addjustQuantity(cartItem.menuItem.id, e.target.value);
+    }
   };
   return (
     <div className="flex items-center justify-center gap-2">
