@@ -33,12 +33,12 @@ const ChangeCartItemQty = ({ cartItem, actions }) => {
   };
   return (
     <div className="flex items-center justify-center gap-2">
-      <span
+      <button
         onClick={() => decreaseQuantity()}
         className="bg-yellow-400 p-3 rounded-lg cursor-pointer"
       >
         <FiMinus />
-      </span>
+      </button>
       <input
         type="text"
         id="quantity"
@@ -47,12 +47,12 @@ const ChangeCartItemQty = ({ cartItem, actions }) => {
         onChange={onChangeHandler}
         className="w-12 pl-4 p-2 bg-yellow-200 rounded-lg outline-none"
       ></input>
-      <span
+      <button
         onClick={() => increaseQuantity()}
         className="bg-yellow-400 p-3 rounded-lg cursor-pointer"
       >
         <FiPlus />
-      </span>
+      </button>
     </div>
   );
 };

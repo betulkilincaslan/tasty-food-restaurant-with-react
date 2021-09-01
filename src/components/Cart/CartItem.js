@@ -24,7 +24,7 @@ const CartItem = ({ cartItem, actions }) => {
         className="w-32 h-32 rounded flex-shrink-0"
       />
       <div className="flex-grow flex flex-col gap-2 sm:flex-row items-center justify-center sm:justify-between">
-        <h5 className="sm:pl-4 sm:w-52">{cartItem.menuItem.name}</h5>
+        <h5 className="sm:pl-4 sm:w-52 selection:">{cartItem.menuItem.name}</h5>
         <ChangeCartItemQty cartItem={cartItem} />
         <h5 className="tracking-widest text-sm">
           ${cartItem.menuItem.price * cartItem.quantity}

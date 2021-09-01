@@ -29,12 +29,12 @@ const MenuListItem = ({ menuItem, actions }) => {
         <div className="font-bold text-xl text-center">{menuItem.name}</div>
         <div className="flex items-center justify-center"></div>
         <div className="flex justify-between">
-          <div className="inline-flex items-center bg-gray-200 hover:bg-gray-300 p-2 text-sm font-semibold text-gray-700 transition-colors duration-300 cursor-pointer w-1/2 select-none">
+          <div className="inline-flex items-center bg-gray-200 hover:bg-gray-300 p-2 text-sm font-semibold text-gray-700 transition-colors duration-300 cursor-pointer w-1/2">
             Price : $ {menuItem.price}
           </div>
           {/* <Link to={`/menu/${menuItem.id}`}> */}
           <button
-            className="bg-green-500 hover:bg-yellow-500 text-white p-3 transition-colors duration-300 cursor-pointer flex items-center justify-center gap-2 select-none w-1/2"
+            className="bg-green-500 hover:bg-yellow-500 text-white p-3 transition-colors duration-300 cursor-pointer flex items-center justify-center gap-2 w-1/2"
             onClick={() => addToCart(menuItem)}
           >
             <FaCartPlus size={30} />
