@@ -1,3 +1,8 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 /* Google Fonts */
@@ -6,11 +11,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&display=swap");
-
-/* ./src/index.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 @layer base {
   html {
