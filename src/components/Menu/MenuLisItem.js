@@ -1,13 +1,10 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import alertify from "alertifyjs";
-// import { FiEye } from "react-icons/fi";
 import { FaCartPlus } from "react-icons/fa";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-// import * as viewCurrentItemActions from "../../redux/actions/viewCurrentItemActions";
 import * as cartActions from "../../redux/actions/cartActions";
 
 const MenuListItem = ({ menuItem, actions }) => {
@@ -29,18 +26,16 @@ const MenuListItem = ({ menuItem, actions }) => {
         <div className="font-bold text-xl text-center">{menuItem.name}</div>
         <div className="flex items-center justify-center"></div>
         <div className="flex justify-between">
-          <div className="inline-flex items-center bg-gray-200 hover:bg-gray-300 p-2 text-sm font-semibold text-gray-700 transition-colors duration-300 cursor-pointer w-1/2">
+          <div className="inline-flex items-center bg-gray-200 hover:bg-gray-300 p-2 text-sm font-semibold text-gray-700 transition-colors duration-300 cursor-pointer w-2/5">
             Price : $ {menuItem.price}
           </div>
-          {/* <Link to={`/menu/${menuItem.id}`}> */}
           <button
-            className="bg-green-500 hover:bg-yellow-500 text-white p-3 transition-colors duration-300 cursor-pointer flex items-center justify-center gap-2 w-1/2"
+            className="bg-green-500 hover:bg-yellow-500 text-white p-3 transition-colors duration-300 cursor-pointer flex items-center justify-center gap-2 w-3/5"
             onClick={() => addToCart(menuItem)}
           >
             <FaCartPlus size={30} />
             <span className="font-semibold uppercase">Add</span>
           </button>
-          {/* </Link> */}
         </div>
       </div>
     </div>
@@ -50,10 +45,6 @@ const MenuListItem = ({ menuItem, actions }) => {
 function mapDispatchToProps(dispatch) {
   return {
     actions: {
-      // viewCurrentItem: bindActionCreators(
-      //   viewCurrentItemActions.viewCurrentItem,
-      //   dispatch
-      // ),
       addToCart: bindActionCreators(cartActions.addToCart, dispatch),
     },
   };
