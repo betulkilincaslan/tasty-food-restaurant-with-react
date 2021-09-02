@@ -27,7 +27,7 @@ const ChangeCartItemQty = ({ cartItem, actions }) => {
 
   const onChangeHandler = (e) => {
     if (e.target.value >= 0) {
-      setQuantity(e.target.value);
+      // setQuantity(e.target.value);
       actions.addjustQuantity(cartItem.menuItem.id, e.target.value);
     }
   };
