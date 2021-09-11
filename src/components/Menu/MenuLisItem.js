@@ -24,7 +24,6 @@ const MenuListItem = ({ menuItem, actions }) => {
         />
 
         <div className="font-bold text-xl text-center">{menuItem.name}</div>
-        <div className="flex items-center justify-center"></div>
         <div className="flex justify-between">
           <div className="inline-flex items-center bg-gray-200 hover:bg-gray-300 p-2 text-sm font-semibold text-gray-700 transition-colors duration-300 cursor-pointer w-2/5">
             Price : $ {menuItem.price}
