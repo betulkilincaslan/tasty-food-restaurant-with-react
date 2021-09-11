@@ -18,10 +18,7 @@ const CategoryList = ({ currentCategory, categories, actions, toggleHome }) => {
   };
 
   return (
-    <aside
-      style={{ zIndex: "999" }}
-      className=" bg-green-800 bg-opacity-90 fixed left-0 right-0 top-16 h-16 p-4 text-center text-sm md:text-lg text-white uppercase sm:tracking-widest border-b-2 border-green-700"
-    >
+    <aside style={{ zIndex: "999" }} className="category-list">
       <ul
         onClick={toggleHome}
         className="flex justify-center items-center gap-1 sm:gap-2 cursor-pointer"

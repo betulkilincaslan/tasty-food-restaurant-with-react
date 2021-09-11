@@ -15,7 +15,7 @@ const MenuListItem = ({ menuItem, actions }) => {
 
   return (
     <div key={menuItem.id} className="flex items-center justify-center">
-      <div className="max-w-sm mx-auto md:m-0 rounded overflow-hidden shadow-lg w-64 lg:w-72 transform hover:scale-105 motion-reduce:transform-none transition-all duration-300 flex flex-col gap-4">
+      <div className="menu-list-item-container">
         <LazyLoadImage
           effect="blur"
           className="w-64 lg:w-72 h-72 bg-center"
@@ -25,11 +25,9 @@ const MenuListItem = ({ menuItem, actions }) => {
 
         <div className="font-bold text-xl text-center">{menuItem.name}</div>
         <div className="flex justify-between">
-          <div className="inline-flex items-center bg-gray-200 hover:bg-gray-300 p-2 text-sm font-semibold text-gray-700 transition-colors duration-300 cursor-pointer w-2/5">
-            Price : $ {menuItem.price}
-          </div>
+          <div className="menu-list-item-price">Price : $ {menuItem.price}</div>
           <button
-            className="bg-green-500 hover:bg-yellow-500 text-white p-3 transition-colors duration-300 cursor-pointer flex items-center justify-center gap-2 w-3/5"
+            className="menu-list-item-button"
             onClick={() => addToCart(menuItem)}
           >
             <FaCartPlus size={30} />

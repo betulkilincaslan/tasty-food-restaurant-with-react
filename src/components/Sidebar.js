@@ -6,36 +6,20 @@ const Sidebar = (props) => {
 
   return (
     <div
-      className={
-        isOpen
-          ? "flex flex-col left-0 w-full fixed top-16 text-center py-4 gap-4 text-xl font-semibold bg-green-800  bg-opacity-90 text-white uppercase tracking-widest"
-          : "hidden"
-      }
+      className={isOpen ? "sidebar" : "hidden"}
       onClick={toggle}
       style={{ zIndex: "9999" }}
     >
-      <Link
-        to="/"
-        className="text-lg transform hover:text-yellow-400 transition-colors duration-300"
-      >
+      <Link to="/" className="sidebar-link">
         Home
       </Link>
-      <Link
-        to="/menu"
-        className="text-lg transform hover:text-yellow-400 transition-colors duration-300"
-      >
+      <Link to="/menu" className="sidebar-link">
         Menu
       </Link>
-      <Link
-        to="/contact"
-        className="text-lg transform hover:text-yellow-400 transition-colors duration-300"
-      >
+      <Link to="/contact" className="sidebar-link">
         Contact Us
       </Link>
-      <Link
-        to="/cart"
-        className="flex gap-2 items-center justify-center text-lg transform hover:text-yellow-400 transition-colors duration-300"
-      >
+      <Link to="/cart" className="sidebar-cart-link">
         <span>Cart</span>
         <FaCartPlus size={20} />
       </Link>

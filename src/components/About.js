@@ -9,13 +9,9 @@ const About = () => {
             data-aos="fade-up"
             className="md:w-1/2 flex flex-col gap-6 justify-center items-center md:items-start"
           >
-            <h4 className="text-green-700 text-xl md:text-2xl font-semibold font-secondary tracking-widest">
-              About us
-            </h4>
-            <h2 className="text-gray-800 font-bold text-2xl md:text-3xl">
-              Who we are
-            </h2>
-            <p className="text-gray-700 font-semibold text-lg md:text-xl max-w-md text-center md:text-left">
+            <h4 className="about-title font-secondary">About us</h4>
+            <h2 className="about-subtitle">Who we are</h2>
+            <p className="about-desc">
               Just let this happen. We just let this flow right out of our
               minds. These little son of a guns hide in your brush and you just
               have to push them out. A fan brush can be your best friend.
@@ -26,7 +22,7 @@ const About = () => {
               smooth={true}
               offset={-64}
               duration={1500}
-              className="py-3 px-5 md:py-5 md:px-8 bg-yellow-500 rounded-full text-xl sm:text-2xl font-semibold hover:bg-yellow-400 hover:text-gray-50 transition-all duration-300 ease-in-out inline-flex items-center cursor-pointer"
+              className="about-link"
             >
               Testimonials
             </LinkScroll>

@@ -15,7 +15,7 @@ const SearchMenuItem = ({ searchQuery, actions }) => {
       onSubmit={handleFormSubmit}
       className="mb-8 h-16 flex justify-center items-center px-8"
     >
-      <div className="flex items-center w-full sm:w-96 rounded-full overflow-x-hidden border-2 border-green-700 bg-gray-100 text-gray-800">
+      <div className="search-input-container">
         <span className="text-lg pl-2 font-bold">
           <BiSearch />
         </span>
@@ -24,7 +24,7 @@ const SearchMenuItem = ({ searchQuery, actions }) => {
           value={searchQuery}
           type="search"
           placeholder="Search here"
-          className="focus:outline-none flex-1 h-10 bg-transparent p-4 placeholder-gray-500 font-semibold text-lg"
+          className="search-input"
         ></input>
       </div>
     </form>

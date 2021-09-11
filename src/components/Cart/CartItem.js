@@ -16,14 +16,14 @@ const CartItem = ({ cartItem, actions }) => {
     <li
       data-aos="fade-up"
       key={cartItem.menuItem.id}
-      className="flex flex-col gap-2 items-center justify-center sm:flex-row p-4 rounded-lg shadow-lg mb-2 font-semibold text-sm sm:text-lg"
+      className="cart-item-container"
     >
       <img
         src={cartItem.menuItem.image}
         alt="menuItem"
         className="w-32 h-32 rounded flex-shrink-0"
       />
-      <div className="flex-grow flex flex-col gap-2 sm:flex-row items-center justify-center sm:justify-between">
+      <div className="cart-item-desc">
         <h5 className="sm:pl-4 sm:w-52 selection:">{cartItem.menuItem.name}</h5>
         <ChangeCartItemQty cartItem={cartItem} />
         <h5 className="tracking-widest text-sm">
@@ -33,7 +33,7 @@ const CartItem = ({ cartItem, actions }) => {
           className="p-2"
           onClick={() => removeFromCart(cartItem.menuItem)}
         >
-          <MdDeleteForever className="text-red-600 hover:text-red-700 transition-colors duration-300 w-8 h-6" />
+          <MdDeleteForever className="cart-item-delete-button" />
         </button>
       </div>
     </li>

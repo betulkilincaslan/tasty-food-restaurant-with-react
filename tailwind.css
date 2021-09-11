@@ -3,8 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* React Slick  */
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
+
 /* Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 
@@ -26,7 +28,47 @@
   font-family: "Caveat", cursive;
 }
 
-/* ========== HERO PAGE ========== */
+/* ========== NAVBAR START ========== */
+.navbar {
+  @apply w-full h-16 flex justify-between items-center fixed top-0 left-0 py-4 px-12 shadow-sm uppercase tracking-widest font-bold text-white;
+}
+
+.nav-brand {
+  @apply text-xl md:text-2xl tracking-widest;
+}
+
+.nav-menu {
+  @apply md:flex md:flex-row gap-6 flex-1 static text-left hidden;
+}
+
+.nav-link {
+  @apply text-lg transform hover:text-yellow-400 transition-colors duration-300 cursor-pointer;
+}
+
+.nav-cart-link {
+  @apply flex gap-2 items-center justify-center text-lg transform hover:text-yellow-400 transition-colors duration-300 cursor-pointer;
+}
+
+.nav-cart-counter {
+  @apply absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-gray-50 transform translate-x-6 -translate-y-5 bg-red-600 rounded-full;
+}
+/* ========== NAVBAR END ========== */
+
+/* ========== SIDEBAR START ========== */
+.sidebar {
+  @apply flex flex-col left-0 w-full fixed top-16 text-center py-4 gap-4 text-xl font-semibold bg-green-800  bg-opacity-90 text-white uppercase tracking-widest;
+}
+
+.sidebar-link {
+  @apply text-lg transform hover:text-yellow-400 transition-colors duration-300;
+}
+
+.sidebar-cart-link {
+  @apply flex gap-2 items-center justify-center text-lg transform hover:text-yellow-400 transition-colors duration-300;
+}
+/* ========== SIDEBAR END ========== */
+
+/* ========== HERO START ========== */
 .hero-bg {
   background-image: linear-gradient(
       to right,
@@ -41,10 +83,130 @@
   background-attachment: fixed;
 }
 
-/* ========== MENU PAGE ========== */
+.hero-container {
+  @apply flex flex-col gap-4 text-center uppercase tracking-widest  font-bold text-gray-50;
+}
+
+.hero-title {
+  @apply lg:text-8xl text-6xl border-b-8 border-yellow-500 p-2;
+}
+
+.hero-link {
+  @apply py-4 px-8 text-2xl font-bold bg-transparent border-2 border-yellow-500 rounded-full hover:bg-yellow-400 transition-all transform duration-300 flex items-center;
+}
+/* ========== HERO END ========== */
+
+/* ========== ABOUT START ========== */
+.about-title {
+  @apply text-green-700 text-xl md:text-2xl font-semibold tracking-widest;
+}
+
+.about-subtitle {
+  @apply text-gray-800 font-bold text-2xl md:text-3xl;
+}
+
+.about-desc {
+  @apply text-gray-700 font-semibold text-lg md:text-xl max-w-md text-center md:text-left;
+}
+
+.about-link {
+  @apply py-3 px-5 md:py-5 md:px-8 bg-yellow-500 rounded-full text-xl sm:text-2xl font-semibold hover:bg-yellow-400 hover:text-gray-50 transition-all duration-300 ease-in-out inline-flex items-center cursor-pointer;
+}
+/* ========== ABOUT END ========== */
+
+/* ========== SERVICES ========== */
+.services-container {
+  width: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+    url("./assets/servicesBg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 60px 0;
+}
+
+/* ========== TESTIMONIALS ========== */
+.testimonials-container {
+  width: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+    url("./assets/testimonialsBg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 60px 0;
+}
+
+/* ========== MENU PAGE START ========== */
 .category-active {
   background-color: #fbbf24;
 }
+
+.category-list {
+  @apply bg-green-800 bg-opacity-90 fixed left-0 right-0 top-16 h-16 p-4 text-center text-sm md:text-lg text-white uppercase sm:tracking-widest border-b-2 border-green-700;
+}
+
+.category-list-item {
+  @apply flex items-center justify-center h-10 md:w-44 rounded px-1 sm:px-3 text-white font-medium hover:text-green-900 md:hover:bg-yellow-400 transition-all duration-300 cursor-pointer;
+}
+
+.menu-list-item-container {
+  @apply max-w-sm mx-auto md:m-0 rounded overflow-hidden shadow-lg w-64 lg:w-72 transform hover:scale-105 motion-reduce:transform-none transition-all duration-300 flex flex-col gap-4;
+}
+
+.menu-list-item-price {
+  @apply inline-flex items-center bg-gray-200 hover:bg-gray-300 p-2 text-sm font-semibold text-gray-700 transition-colors duration-300 cursor-pointer w-2/5;
+}
+
+.menu-list-item-button {
+  @apply bg-green-500 hover:bg-yellow-500 text-white p-3 transition-colors duration-300 cursor-pointer flex items-center justify-center gap-2 w-3/5;
+}
+
+.search-input-container {
+  @apply flex items-center w-full sm:w-96 rounded-full overflow-x-hidden border-2 border-green-700 bg-gray-100 text-gray-800;
+}
+
+.search-input {
+  @apply focus:outline-none flex-1 h-10 bg-transparent p-4 placeholder-gray-500 font-semibold text-lg;
+}
+/* ========== MENU PAGE END ========== */
+
+/* ========== CART PAGE START ========== */
+.cart-item-container {
+  @apply flex flex-col gap-2 items-center justify-center sm:flex-row p-4 rounded-lg shadow-lg mb-2 font-semibold text-sm sm:text-lg;
+}
+
+.cart-item-desc {
+  @apply flex-grow flex flex-col gap-2 sm:flex-row items-center justify-center sm:justify-between;
+}
+
+.cart-item-delete-button {
+  @apply text-red-600 hover:text-red-700 transition-colors duration-300 w-8 h-6;
+}
+
+.confirm-cart-button {
+  @apply w-full mx-auto px-4 py-2 uppercase font-bold text-xs bg-yellow-400 hover:bg-yellow-500 hover:text-gray-100 transition-colors duration-300;
+}
+/* ========== CART PAGE END ========== */
+
+/* ========== FOOTER START ========== */
+.footer-brand-link {
+  @apply flex justify-center items-center font-bold text-xl md:text-2xl tracking-widest uppercase cursor-pointer text-white;
+}
+
+.footer-link {
+  @apply hover:text-gray-300 transition-colors duration-300;
+}
+
+.footer-cart-link {
+  @apply flex gap-1 items-center justify-center               
+  hover:text-gray-300 transition-colors duration-300;
+}
+.social-link {
+  @apply w-6 h-10 hover:text-gray-300 transition-colors duration-300;
+}
+/* ========== FOOTER END ========== */
 
 /* ========== NOT FOUND PAGE ========== */
 .not-found-bg {
@@ -89,28 +251,4 @@
 
 .scroll-icon:active {
   transform: scale(0.9);
-}
-
-/* ========== SERVICES ========== */
-.services-container {
-  width: 100%;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
-    url("./assets/servicesBg.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  padding: 60px 0;
-}
-
-/* ========== TESTIMONIALS ========== */
-.testimonials-container {
-  width: 100%;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
-    url("./assets/testimonialsBg.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  padding: 60px 0;
 }

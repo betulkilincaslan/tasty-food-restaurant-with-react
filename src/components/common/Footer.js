@@ -11,36 +11,23 @@ const Footer = () => {
     <footer style={{ zIndex: "9990" }} className="bg-green-800">
       <div className="max-w-6xl px-6 py-8 mx-auto text-center text-gray-50">
         <div className="grid gap-12 mt-12 md:mt-16 sm:grid-cols-2 md:grid-cols-3">
-          <div
-            className="flex justify-center items-center font-bold text-xl md:text-2xl logo tracking-widest uppercase cursor-pointer text-white"
-            onClick={toggleHome}
-          >
+          <div className="footer-brand-link logo" onClick={toggleHome}>
             <span className="text-yellow-500">TASTY</span> &nbsp;FOOD
           </div>
           <div className="flex justify-center items-center">
             <div className="flex gap-4 items-center justify-center">
               <span>
-                <Link
-                  to="/menu"
-                  className="hover:text-gray-300 transition-colors duration-300"
-                >
+                <Link to="/menu" className="footer-link">
                   Menu
                 </Link>
               </span>
               <span>
-                <Link
-                  to="/contact"
-                  className="hover:text-gray-300 transition-colors duration-300"
-                >
+                <Link to="/contact" className="footer-link">
                   Contact Us
                 </Link>
               </span>
               <span>
-                <Link
-                  to="/cart"
-                  className="flex gap-1 items-center justify-center               
-                  hover:text-gray-300 transition-colors duration-300"
-                >
+                <Link to="/cart" className="footer-cart-link">
                   <FaCartPlus size={20} />
                   <span>Cart</span>
                 </Link>
@@ -51,17 +38,17 @@ const Footer = () => {
             <div className="flex gap-6">
               <span className="">
                 <a href="/">
-                  <FaFacebook className="w-6 h-10 hover:text-gray-300 transition-colors duration-300" />
+                  <FaFacebook className="social-link" />
                 </a>
               </span>
               <span>
                 <a href="/">
-                  <FaInstagram className="w-6 h-10 hover:text-gray-300 transition-colors duration-300" />
+                  <FaInstagram className="social-link" />
                 </a>
               </span>
               <span>
                 <a href="/">
-                  <FaTwitter className="w-6 h-10 hover:text-gray-300 transition-colors duration-300" />
+                  <FaTwitter className="social-link" />
                 </a>
               </span>
             </div>

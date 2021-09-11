@@ -34,9 +34,7 @@ const OrderSummary = ({ cart }) => {
 
         <div className="mb-8">
           <div className="w-full px-6">
-            <button className="w-full mx-auto px-4 py-2 uppercase font-bold text-xs bg-yellow-400 hover:bg-yellow-500 hover:text-gray-100 transition-colors duration-300">
-              Confirm Cart
-            </button>
+            <button className="confirm-cart-button">Confirm Cart</button>
           </div>
         </div>
       </div>
