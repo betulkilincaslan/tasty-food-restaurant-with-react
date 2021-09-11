@@ -25,12 +25,6 @@ const ChangeCartItemQty = ({ cartItem, actions }) => {
     actions.addjustQuantity(cartItem.menuItem.id, quantity);
   };
 
-  const onChangeHandler = (e) => {
-    if (e.target.value >= 0) {
-      // setQuantity(e.target.value);
-      actions.addjustQuantity(cartItem.menuItem.id, e.target.value);
-    }
-  };
   return (
     <div className="flex items-center justify-center gap-2">
       <button
@@ -39,14 +33,7 @@ const ChangeCartItemQty = ({ cartItem, actions }) => {
       >
         <FiMinus />
       </button>
-      <input
-        type="text"
-        id="quantity"
-        name="quantity"
-        value={quantity}
-        onChange={onChangeHandler}
-        className="w-12 pl-4 p-2 bg-yellow-200 rounded-lg outline-none"
-      ></input>
+      <span className="w-12 pl-4 p-2 bg-yellow-200 rounded-lg">{quantity}</span>
       <button
         onClick={() => increaseQuantity()}
         className="bg-yellow-400 p-3 rounded-lg cursor-pointer"
